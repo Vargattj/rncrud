@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Text, View, FlatList, Alert} from 'react-native';
 import {ListItem, Button, Icon} from 'react-native-elements';
 import users from '../data/users';
@@ -40,7 +40,7 @@ export default (props) => {
         subtitle={user.words}
         bottomDivider
         rightElement={getActions(user)}
-        onPress={() => props.navigation.navigate('UserForm')}
+        onPress={() => props.navigation.navigate('UserForm', user)}
       />
     );
   };
