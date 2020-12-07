@@ -13,7 +13,7 @@ export default (props) => {
         onPress() {
           dispatch({
             type: 'deleteUser',
-            payloadd: user,
+            payload: user,
           });
         },
       },
